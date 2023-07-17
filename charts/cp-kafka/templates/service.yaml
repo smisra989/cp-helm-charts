@@ -11,6 +11,8 @@ spec:
   ports:
     - port: 9092
       name: broker
+    - port: 1570
+      name: ingressport-0
     {{- if .Values.prometheus.jmx.enabled }}
     - port: {{ .Values.prometheus.jmx.port }}
       name: metrics
